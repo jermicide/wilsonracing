@@ -3,68 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprint Car Racing</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Join the Wilson Family in their Sprint Car Racing journey! Live updates, videos, and more.">
+    <title>Wilson Family Sprint Car Racing | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #111; color: white; margin: 0; }
-        .navbar { background-color: #222; }
-        .navbar-toggler { border-color: rgba(255, 255, 255, 0.5); }
-        .dropdown-menu { background: #444; }
-        .dropdown-item { color: white; }
-        .dropdown-item:hover { background: #555; }
-        .slider { position: relative; width: 100%; margin: 0; overflow: hidden; border-radius: 0; }
-        .slides { display: flex; width: 300%; transition: transform 1s ease-in-out; }
-        .slide { width: 100%; }
-        .slide img { width: 100%; border-radius: 0; }
-        @keyframes slideAnimation {
-            0% { transform: translateX(0%); }
-            33% { transform: translateX(-100%); }
-            66% { transform: translateX(-200%); }
-            100% { transform: translateX(0%); }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000; /* Black background */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        .slides { animation: slideAnimation 9s infinite; }
-        .video-container { text-align: center; margin-top: 0; }
-        iframe { width: 100%; height: 500px; border-radius: 0; }
-        .social-media-feed { text-align: center; margin-top: 0; }
+        h1, h2, h3 {
+            font-family: 'Racing Sans One', sans-serif;
+            color: #ff0000; /* Red headings */
+            text-shadow: 2px 2px #1e90ff; /* Blue shadow */
+        }
+        .navbar {
+            background: linear-gradient(90deg, #1e90ff, #ff0000); /* Blue to red gradient */
+            padding: 1rem 0;
+            border-bottom: 4px solid #ffff00; /* Yellow accent */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand img {
+            height: 60px;
+            width: auto;
+        }
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ffff00 !important; /* Yellow hover */
+        }
+        .video-hero {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        .video-hero iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #ff0000; /* Red border */
+        }
+        .welcome-section {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .welcome-section img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 2px solid #1e90ff; /* Blue border */
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .social-feed {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .social-feed .row > div {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #ff0000;
+            border-color: #ff0000;
+            font-weight: 700;
+            padding: 10px 30px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #1e90ff;
+            border-color: #1e90ff;
+        }
+        .footer {
+            background: #1e90ff;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 4px solid #ff0000;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 40px;
+            }
+            .welcome-section img {
+                max-width: 300px;
+            }
+            .video-hero {
+                padding-bottom: 75%; /* Adjust for mobile aspect ratio */
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://via.placeholder.com/180x60?text=Wilson+Family+Logo" alt="Wilson Family Sprint Car Racing Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="our-story.html">Our Story</a></li>
                     <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link" href="socials.html">Social Medias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socials.html">Social Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <div class="slider">
-        <div class="slides">
-            <div class="slide"><img src="https://via.placeholder.com/1920x1080?text=Sprint+Car+1" alt="Sprint Car 1"></div>
-            <div class="slide"><img src="https://via.placeholder.com/1920x1080?text=Sprint+Car+2" alt="Sprint Car 2"></div>
-            <div class="slide"><img src="https://via.placeholder.com/1920x1080?text=Sprint+Car+3" alt="Sprint Car 3"></div>
+
+    <section class="video-hero">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="welcome-section">
+        <h2>Welcome to the Wilson Family Racing Team</h2>
+        <p>We’re the Wilson Family, and sprint car racing is our passion! From our first race in 2005 to competing on national circuits, we’ve built a legacy of speed, teamwork, and family fun. Join us on the track and follow our journey!</p>
+        <img src="https://via.placeholder.com/400x300?text=Wilson+Family+Photo" alt="Wilson Family Photo">
+        <a href="media.html" class="btn btn-primary mt-3">Check Out Our Media</a>
+    </section>
+
+    <section class="social-feed">
+        <h2>Follow Us on Social Media</h2>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h3>Twitter</h3>
+                <blockquote class="twitter-tweet" data-theme="dark">
+                    <p>Another thrilling race night! Check out the highlights! #WilsonRacing</p>
+                    <a href="https://twitter.com/intent/tweet?text=Love+Wilson+Family+Racing!"></a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3>Instagram</h3>
+                <iframe src="https://www.instagram.com/embed.js" height="400" style="border: 2px solid #1e90ff; border-radius: 10px;"></iframe>
+                <p><em>Follow us on Instagram for more photos! (Placeholder embed)</em></p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3>Facebook</h3>
+                <div class="fb-post" data-href="https://www.facebook.com/placeholder" data-width="500" data-show-text="true">
+                    <blockquote cite="https://www.facebook.com/placeholder" class="fb-xfbml-parse-ignore">
+                        <p>Exciting race update from the Wilson Family! #SprintCarRacing</p>
+                        <a href="https://www.facebook.com/placeholder">View on Facebook</a>
+                    </blockquote>
+                </div>
+                <p><em>Follow us on Facebook for updates! (Placeholder embed)</em></p>
+            </div>
         </div>
-    </div>
+        <div id="fb-root"></div>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="YOUR_NONCE"></script>
+    </section>
 
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <footer class="footer">
+        <p>© 2025 Wilson Family Sprint Car Racing | <a href="contact.html" style="color: #ffff00;">Contact Us</a> | <a href="https://twitter.com" style="color: #ffff00;">Follow Us</a></p>
+    </footer>
 
-    <div class="social-media-feed">
-        <blockquote class="twitter-tweet">
-            <a href="https://twitter.com/YOUR_TWITTER_HANDLE"></a>
-        </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
