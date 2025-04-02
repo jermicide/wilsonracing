@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Follow the Wilson Family's racing journey on social media!">
-    <title>Wilson Racing | Social Media</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <meta name="description" content="Wilson Racing Media Gallery - Photos from the track!">
+    <title>Wilson Racing | Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -14,30 +14,42 @@
             color: #fff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
-        h1, h2, h3 {
+        h1 {
             font-family: 'Racing Sans One', sans-serif;
             color: #ff0000;
             text-shadow: 2px 2px #1e90ff;
+            text-align: center;
+            margin-top: 20px;
         }
         .navbar {
             background: linear-gradient(90deg, #1e90ff, #ff0000);
-            padding: 1rem 0;
             border-bottom: 4px solid #ffff00;
         }
-        .navbar-brand img {
-            height: 60px;
-            width: auto;
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 700;
         }
-        .social-feed {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            text-align: center;
+        .nav-link:hover {
+            color: #ffff00 !important;
         }
-        .social-feed .row > div {
-            margin-bottom: 20px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
         .footer {
             background: #1e90ff;
@@ -51,7 +63,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="logo.png" alt="Wilson Racing Logo">
+                <img src="logo.jpg" alt="Wilson Racing Logo" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -60,39 +72,28 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="our-story.html">Our Story</a></li>
-                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="socials.html">Social Media</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socials.html">Social Media</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section class="social-feed">
-        <h2>Follow Us on Social Media</h2>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <h3>TikTok</h3>
-                <iframe src="https://www.tiktok.com/@wilsonracing/embed" height="400" width="100%" style="border: 2px solid #1e90ff; border-radius: 10px;"></iframe>
-                <p><em>Watch our latest race highlights on TikTok!</em></p>
-            </div>
-            <div class="col-12 col-md-4">
-                <h3>Instagram</h3>
-                <iframe src="https://www.instagram.com/wilsonracing/embed" height="400" width="100%" style="border: 2px solid #1e90ff; border-radius: 10px;"></iframe>
-                <p><em>Follow us on Instagram for race updates!</em></p>
-            </div>
-            <div class="col-12 col-md-4">
-                <h3>Facebook</h3>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/wilsonracing&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" height="400" width="100%" style="border: 2px solid #1e90ff; border-radius: 10px;"></iframe>
-                <p><em>Like us on Facebook for news and event updates!</em></p>
-            </div>
-        </div>
-    </section>
-
+    
+    <h1>Wilson Racing Media Gallery</h1>
+    <div class="gallery">
+        <img src="assets/1.jpg" alt="Racing Action">
+        <img src="assets/2.jpg" alt="Pit Crew at Work">
+        <img src="assets/3.jpg" alt="Victory Celebration">
+        <img src="assets/4.jpg" alt="Speeding Down the Track">
+        <img src="assets/family.jpg" alt="Team Wilson in the Pits">
+        <img src="assets/5.jpg" alt="Fans Cheering">
+    </div>
+    
     <footer class="footer">
-        <p>© 2025 Wilson Racing | <a href="contact.html" style="color: #ffff00;">Contact Us</a> | <a href="https://www.tiktok.com/@wilsonracing" style="color: #ffff00;">Follow Us</a></p>
+        <p>© 2025 Wilson Racing | <a href="contact.html" style="color: #ffff00;">Contact Us</a> | <a href="https://twitter.com" style="color: #ffff00;">Follow Us</a></p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
