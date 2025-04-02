@@ -22,7 +22,10 @@
             text-shadow: 2px 2px #1e90ff;
         }
         .navbar {
-            background: linear-gradient(90deg, #1e90ff, #ff0000);
+            background: url('assets/bar.jpg') no-repeat center center; /* Blue to red gradient */
+            background-size: cover;
+            width: 100%;
+            height: auto;
             padding: 1rem 0;
             border-bottom: 4px solid #ffff00;
             position: sticky;
@@ -81,10 +84,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
+        
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="logo.jpg" alt="Sprint Car Racing Logo" height="60">
+                
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="our-story.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socials.html">Social Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 

@@ -22,9 +22,12 @@
             text-shadow: 2px 2px #1e90ff; /* Blue shadow */
         }
         .navbar {
-            background: linear-gradient(90deg, #1e90ff, #ff0000); /* Blue to red gradient */
+            background: url('assets/bar.jpg') no-repeat center center; /* Blue to red gradient */
+            background-size: cover;
+            width: 100%;
+            height: auto;
             padding: 1rem 0;
-            border-bottom: 4px solid #ffff00; /* Yellow accent */
+            border-bottom: 4px solid #ffff00;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -120,20 +123,21 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
+        
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="logo.jpg" alt="Wilson Family Sprint Car Racing Logo">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="our-story.html">Our Story</a></li>
                     <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
                     <li class="nav-item"><a class="nav-link" href="socials.html">Social Media</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -146,7 +150,6 @@
         <div class="contact-info">
             <h2>Contact Information</h2>
             <p><strong>Email:</strong> <a href="mailto:JasonWilson0407@gmail.com" style="color: #ffff00;">JasonWilson0407@gmail.com</a></p>
-            <p><strong>Phone:</strong> (918) 550-1028</p>
             </p>
         </div>
 

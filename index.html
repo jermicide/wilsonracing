@@ -22,9 +22,12 @@
             text-shadow: 2px 2px #1e90ff; /* Blue shadow */
         }
         .navbar {
-            background: linear-gradient(90deg, #1e90ff, #ff0000); /* Blue to red gradient */
+            background: url('assets/bar.jpg') no-repeat center center; /* Blue to red gradient */
+            background-size: cover;
+            width: 100%;
+            height: auto;
             padding: 1rem 0;
-            border-bottom: 4px solid #ffff00; /* Yellow accent */
+            border-bottom: 4px solid #ffff00;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -115,9 +118,10 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
+        
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="logo.jpg" alt="Wilson Family Sprint Car Racing Logo">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
